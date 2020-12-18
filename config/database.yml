@@ -6,9 +6,15 @@ default: &default
   pool: 5
   timeout: 5000
   host: <%= ENV['POSTGRES_HOST'] %>
+
 development:
-  <<: *default
-  database: <%= ENV['POSTGRES_DB'] %>
+     encoding: unicode
+    database: postgres
+    username: kyle 
+    password: 
+
+
+
 test:
   <<: *default
   database: <%= ENV['POSTGRES_TEST_DB'] %>
